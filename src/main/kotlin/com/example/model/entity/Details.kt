@@ -11,6 +11,6 @@ data class Details(
     var utcTime : String = LocalDateTime.now().toString(),
     var track : String? = null,
     var githubFileUrl : String = "https://bleh",
-    var githubRepoUrl : String = "https://biggerrepo",
+    var githubRepoUrl : String = "https://github.com/Ofure004/HNG_stage_one",
     var status_code: Int? = 200
 )
