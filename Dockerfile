@@ -3,6 +3,7 @@
 FROM openjdk:8-jdk-alpine as builder
 WORKDIR /root
 COPY . .
+RUN chmod +x ./gradlew
 RUN ./gradlew build
 
 # Runner stage only needs JRE and JAR
