@@ -1,6 +1,6 @@
 # Dockerfile focused on production use case
 # Builder stage needs JDK and gradle
-FROM gradle:8-jdk17 as builder
+FROM gradle:7.5-jdk17 as builder
 WORKDIR /root
 COPY . .
 RUN gradle build
