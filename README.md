@@ -59,3 +59,22 @@ For example:
     - Validate the correctness of each data point in the JSON response.
 
 </details>
+
+Live demo is at: https://hng-stage-one-dnn7.onrender.com/api
+
+You run it in your browser like this: https://hng-stage-one-dnn7.onrender.com/api?slack_name=slack_username&track=your_track
+
+or you run it in your cmd like
+```sh
+ $ curl -X GET "https://hng-stage-one-dnn7.onrender.com/api?slack_name=ofure&track=frontend"
+{"slackName":"ofure",
+  "currentDay":"FRIDAY",
+  "utcTime":"2023-09-15T19:14:42Z",
+  "track":"frontend",
+  "githubFileUrl":"https://github.com/Ofure004/HNG_stage_one/blob/master/src/main/kotlin/com/example/Application.kt",
+  "githubRepoUrl":"https://github.com/Ofure004/HNG_stage_one",
+  "status_code":200
+ }
+```
+If you don't pass a slack username value, it throws a bad request error, with the message: "slack name cannot be blank"
+Similarly, if you don't pass a track value, it throws a bad request error, with the message: "track cannot be empty"
