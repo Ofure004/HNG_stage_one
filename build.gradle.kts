@@ -34,6 +34,12 @@ dependencies {
     testImplementation("org.jetbrains.kotlin:kotlin-test-junit:$kotlin_version")
 }
 
+kotlin {
+    jvmToolchain {
+        this.languageVersion.set(JavaLanguageVersion.of(17))
+    }
+}
+
 tasks.withType<org.jetbrains.kotlin.gradle.tasks.KotlinJvmCompile>().configureEach {
     jvmTargetValidationMode.set(org.jetbrains.kotlin.gradle.dsl.jvm.JvmTargetValidationMode.WARNING)
 }
